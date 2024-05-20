@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'war'
 }
 
 group = 'com.yourcity.domain'
@@ -10,16 +11,9 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework:spring-context:6.1.7'
-    implementation 'jakarta.annotation:jakarta.annotation-api:3.0.0'
-    implementation 'org.springframework:spring-webmvc:6.1.7'
-
-    compileOnly 'javax.servlet:javax.servlet-api:4.0.1'
-
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.springframework:spring-webmvc:6.0.7'
 }
 
-test {
-    useJUnitPlatform()
+war {
+    archiveFileName = 'my-spring-app.war'
 }
