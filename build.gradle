@@ -15,6 +15,9 @@ dependencies {
     implementation 'javax.servlet:javax.servlet-api:4.0.1'
 }
 
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
 war {
     archiveFileName = 'my-spring-app.war'
 }
