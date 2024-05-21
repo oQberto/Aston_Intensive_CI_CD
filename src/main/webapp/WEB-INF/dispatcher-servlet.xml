@@ -12,5 +12,12 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <mvc:annotation-driven />
-    <context:component-scan base-package="com.yourcity.domain"></context:component-scan>
+    <context:component-scan base-package="com.yourcity.domain"/>
+
+    <mvc:annotation-driven/>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
 </beans>
